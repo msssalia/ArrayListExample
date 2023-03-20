@@ -14,15 +14,16 @@ public class Main {
     public static void main(String[] args) {
 
         accounts = bankApplication.allAccounts();
-         System.out.println("До удаления = ");
-        accounts.forEach(System.out::println);
-        System.out.println(ids.get(1));
+    //     System.out.println("До удаления = ");
+  //      accounts.forEach(System.out::println);
+//        System.out.println(ids.get(1));
 
-        bankApplication.removeAccount(139);
+//        bankApplication.removeAccount(139);
 
-        System.out.println("После удаления = ");
-        accounts.forEach(System.out::println);
-
+       // System.out.println("После удаления = ");
+     //   accounts.forEach(System.out::println);
+        System.out.println(accounts.size());
+        System.out.println(bankApplication.getMaxAccount());
     }
 
 }
