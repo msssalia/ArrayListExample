@@ -1,9 +1,6 @@
 package kz;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Scanner;
+import java.util.*;
 import java.util.stream.Stream;
 
 public class BankApplication {
@@ -34,9 +31,43 @@ public class BankApplication {
         accounts.add(account);
     }
 
+    public List<Account> allAccounts() {
+        accounts = new ArrayList<Account>();
 
-    public void removeAccount(int i) {
-//        accounts.remove()
+//        List<Account> accountList = new ArrayList<>();
+
+        Account account1 = new Account();
+        Account account2 = new Account();
+        Account account3 = new Account();
+
+        account1.setId(1);
+        account1.setName("Nursultan");
+        account1.setSurname("Berdibaev");
+        account1.setBalance(36660);
+
+        accounts.add(account1);
+
+        account2.setId(2);
+        account2.setName("Alisher");
+        account2.setSurname("Masimov");
+        account2.setBalance(18000);
+
+        accounts.add(account2);
+
+        account3.setId(3);
+        account3.setName("Adina");
+        account3.setSurname("Sanayatova");
+        account3.setBalance(40000);
+        accounts.add(account3);
+
+        return accounts;
+
+    }
+
+
+    public void removeAccount(int id) {
+        Account account = new Account();
+
     }
 
     public Account getMaxAccount() {
