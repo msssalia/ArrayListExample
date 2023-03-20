@@ -7,6 +7,7 @@ public class BankApplication {
     Scanner scanner = new Scanner(System.in);
     private String name;
     private ArrayList<Account> accounts = new ArrayList<Account>();
+    static List<Integer> ids = new ArrayList<>();
 
     public void addAccount(Account account) {
 
@@ -31,6 +32,10 @@ public class BankApplication {
         accounts.add(account);
     }
 
+    public List<Integer> allIds() {
+        return ids;
+    }
+
     public List<Account> allAccounts() {
         accounts = new ArrayList<Account>();
 
@@ -40,25 +45,30 @@ public class BankApplication {
         Account account2 = new Account();
         Account account3 = new Account();
 
-        account1.setId(1);
+
+        account1.setId(135);
         account1.setName("Nursultan");
         account1.setSurname("Berdibaev");
         account1.setBalance(36660);
 
         accounts.add(account1);
 
-        account2.setId(2);
+        account2.setId(157);
         account2.setName("Alisher");
         account2.setSurname("Masimov");
         account2.setBalance(18000);
 
         accounts.add(account2);
 
-        account3.setId(3);
+        account3.setId(139);
         account3.setName("Adina");
         account3.setSurname("Sanayatova");
         account3.setBalance(40000);
         accounts.add(account3);
+
+        ids.add(account1.getId());
+        ids.add(account2.getId());
+        ids.add(account3.getId());
 
         return accounts;
 
@@ -66,7 +76,23 @@ public class BankApplication {
 
 
     public void removeAccount(int id) {
-        Account account = new Account();
+
+        for(int i = 0; i < accounts.size(); i++) {
+            if (accounts.get(i).getId() == id) {
+                accounts.remove(i);
+            }
+        }
+
+//        for (Account account : accounts) {
+//            if (account.getId() == id) {
+//                accounts.remove(account.getId()== id);
+//            }
+//
+//            if (account.equals(account.getName().equals("Alisher"))) {
+//                System.out.println("Account of Alisher = " + account);
+//            }
+//        }
+
 
     }
 
